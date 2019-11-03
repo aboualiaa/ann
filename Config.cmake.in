@@ -1,0 +1,18 @@
+# Variables that describe the package
+set(ANN_FOUND TRUE)
+set(ANN_VERSION @PROJECT_VERSION@)
+set(ANN_INCLUDE_DIRS "${CMAKE_INSTALL_PREFIX}/include")
+set(ANN_LIBRARIES "${CMAKE_INSTALL_PREFIX}/lib/libANN.a")
+
+# Export the package information
+include(CMakePackageConfigHelpers)
+configure_package_config_file(
+    ANNConfig.cmake.in
+    "${CMAKE_CURRENT_BINARY_DIR}/ANNConfig.cmake"
+    INSTALL_DESTINATION lib/cmake/ANN
+)
+
+# Install the package configuration file
+install(FILES "${CMAKE_CURRENT_BINARY_DIR}/ANNConfig.cmake"
+    DESTINATION lib/cmake/ANN
+)
