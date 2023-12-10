@@ -1,0 +1,12 @@
+cc_binary(
+    name = "ann_test",
+    srcs = [
+        "ann_test.cpp",
+        "rand.cpp",
+        "rand.h",
+    ],
+    copts = ["-lm"],
+    deps = [
+        "//:ANN",
+    ],
+)

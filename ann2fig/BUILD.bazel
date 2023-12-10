@@ -1,0 +1,7 @@
+cc_binary(
+    name = "ann2fig",
+    srcs = ["ann2fig.cpp"],
+    deps = [
+        "//:ANN",
+    ],
+)
